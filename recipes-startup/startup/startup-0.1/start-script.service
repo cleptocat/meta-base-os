@@ -1,0 +1,12 @@
+[Unit]
+Description=Custom Start Service
+
+[Service]
+Type=oneshot
+Restart=no
+RemainAfterExit=true
+ExecStart=/usr/libexec/start_script.sh
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
